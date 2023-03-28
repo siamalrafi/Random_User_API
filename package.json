@@ -1,0 +1,25 @@
+{
+  "name": "random-api",
+  "version": "1.0.0",
+  "description": "this is a simple server for random api generate ",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siamalrafi/Random_User_API.git"
+  },
+  "keywords": [
+    "random_api"
+  ],
+  "author": "Siam Al Rafi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siamalrafi/Random_User_API/issues"
+  },
+  "homepage": "https://github.com/siamalrafi/Random_User_API#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
