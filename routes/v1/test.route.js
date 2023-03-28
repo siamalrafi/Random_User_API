@@ -22,7 +22,7 @@ router.route("/")
 
 
 .get((req,res)=>{
-    res.send("main get route hits. ")
+    res.send("Test routed checked!")
 });
 
 
