@@ -20,17 +20,28 @@ router.route("/user/all")
     *
     * @apiError (Unauthorized 401)  Unauthorized  Only authenticated users can access the data
     * @apiError (Forbidden 403)     Forbidden     Only admins can access the data
-    */
-
-  // .get((req, res) => {
-  //   const rawdata = fs.readFileSync('data.json');
-  //   const allUserdata = JSON.parse(rawdata);
-  //   // console.log(student); // all user data available
-  //   res.send(allUserdata);
-  // });
-
+    
+  **/
 
   .get(userControler.getAllUserInfo);
+
+
+router.route("/user/random")
+  .get(userControler.getRandomUser);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
