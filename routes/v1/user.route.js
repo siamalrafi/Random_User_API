@@ -3,7 +3,7 @@ const router = express.Router();
 const fs = require("fs");
 
 
-router.route("/")
+router.route("/user/all")
   /**
     * @api {get} /all user info
     * @apiDescription Get all the user information from this route
@@ -23,7 +23,7 @@ router.route("/")
   .get((req, res) => {
     const rawdata = fs.readFileSync('data.json');
     const student = JSON.parse(rawdata);
-    console.log(student);
+    // console.log(student); // all user data available
     res.send(student)
   });
 
