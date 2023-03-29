@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-
+const fs = require("fs");
 
 
 router.route("/")
@@ -20,11 +20,21 @@ router.route("/")
     * @apiError (Forbidden 403)     Forbidden     Only admins can access the data
     */
 
-
   .get((req, res) => {
-    res.send("Test routed checked!")
-  });
 
+    const rawdata = fs.readFileSync('data.json');
+
+    const student = JSON.parse(rawdata);
+    console.log(student);
+
+    //   console.log(student);
+    //   res.sendFile("student")
+
+
+    res.send(student)
+
+
+  });
 
 
 
