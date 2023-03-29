@@ -1,50 +1,50 @@
 [
-    {
-      "id": "1",
-      "gender": "male",
-      "name": "Hallie Woods",
-      "contact": "APPLICA",
-      "address": "659 Indiana Place, Cetronia, Maine, 421",
-      "photoUrl": "http://placehold.it/32x32"
-    },
-    {
-      "id": "2",
-      "gender": "female",
-      "name": "Charles Whitley",
-      "contact": "PORTALINE",
-      "address": "272 McKibbin Street, Malo, Virgin Islands, 3196",
-      "photoUrl": "http://placehold.it/32x32"
-    },
-    {
-      "id": "3",
-      "gender": "male",
-      "name": "Odonnell Delaney",
-      "contact": "MAXEMIA",
-      "address": "544 Bridge Street, Crawfordsville, North Carolina, 574",
-      "photoUrl": "http://placehold.it/32x32"
-    },
-    {
-      "id": "4",
-      "gender": "male",
-      "name": "Shana Mathews",
-      "contact": "CORMORAN",
-      "address": "582 Howard Place, Hampstead, New York, 7570",
-      "photoUrl": "http://placehold.it/32x32"
-    },
-    {
-      "id": "5",
-      "gender": "female",
-      "name": "Morgan Pierce",
-      "contact": "CYTREK",
-      "address": "184 Temple Court, Sanford, Maryland, 4545",
-      "photoUrl": "http://placehold.it/32x32"
-    },
-    {
-      "id": "6",
-      "gender": "female",
-      "name": "Hopkins Clark",
-      "contact": "ZAPHIRE",
-      "address": "584 Chauncey Street, Dundee, Minnesota, 1436",
-      "photoUrl": "http://placehold.it/32x32"
-    }
-  ]
+  {
+    "id": "1",
+    "gender": "male",
+    "name": "Hallie Woods",
+    "contact": "APPLICA",
+    "address": "659 Indiana Place, Cetronia, Maine, 421",
+    "photoUrl": "http://placehold.it/32x32"
+  },
+  {
+    "id": "2",
+    "gender": "female",
+    "name": "Charles Whitley",
+    "contact": "PORTALINE",
+    "address": "272 McKibbin Street, Malo, Virgin Islands, 3196",
+    "photoUrl": "http://placehold.it/32x32"
+  },
+  {
+    "id": "3",
+    "gender": "male",
+    "name": "Odonnell Delaney",
+    "contact": "MAXEMIA",
+    "address": "544 Bridge Street, Crawfordsville, North Carolina, 574",
+    "photoUrl": "http://placehold.it/32x32"
+  },
+  {
+    "id": "4",
+    "gender": "male",
+    "name": "Shana Mathews",
+    "contact": "CORMORAN",
+    "address": "582 Howard Place, Hampstead, New York, 7570",
+    "photoUrl": "http://placehold.it/32x32"
+  },
+  {
+    "id": "5",
+    "gender": "female",
+    "name": "Morgan Pierce",
+    "contact": "CYTREK",
+    "address": "184 Temple Court, Sanford, Maryland, 4545",
+    "photoUrl": "http://placehold.it/32x32"
+  },
+  {
+    "id": "6",
+    "gender": "female",
+    "name": "Hopkins Clark",
+    "contact": "ZAPHIRE",
+    "address": "584 Chauncey Street, Dundee, Minnesota, 1436",
+    "photoUrl": "http://placehold.it/32x32"
+  }
+]

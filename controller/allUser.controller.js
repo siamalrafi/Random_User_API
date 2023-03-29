@@ -1,19 +1,9 @@
 const fs = require("fs");
 
 
-module.exports.getAllUserInfo = (req, res, next) => {
-    const rawdata = fs.readFileSync('data.json');
-    const allUserdata = JSON.parse(rawdata);
-    // console.log(student); // all user data available
-    res.send(allUserdata);
-};
-
-
-
 module.exports.getRandomUser = async (req, res, next) => {
     const rawdata = fs.readFileSync('data.json');
     const allUserdata = JSON.parse(rawdata);
-
 
     // random integer value generated 
     const getRndInteger = (min, max) => {
@@ -28,10 +18,24 @@ module.exports.getRandomUser = async (req, res, next) => {
 };
 
 
+module.exports.getAllUserInfo = (req, res, next) => {
+    const rawdata = fs.readFileSync('data.json');
+    const allUserdata = JSON.parse(rawdata);
+    // console.log(student); // all user data available
+    res.send(allUserdata);
+};
+
+
+
 
 module.exports.saveUserInfo = async (req, res, next) => {
+    const userInfo = req.body;
 
-    console.log("object");
+
+    res.sendFile(__dirname+"")
+
+
+
 
     res.send("saveUserInfo");
 
