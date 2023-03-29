@@ -56,9 +56,8 @@ router.route("/user/save")
 
 
 
-
-
-
+router.route("/user/update/:id")
+  .patch(userControler.updateUserInfo);
 
 
 
