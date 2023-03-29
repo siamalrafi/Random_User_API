@@ -43,10 +43,13 @@ router.route("/user/random")
      * @apiError (Forbidden 403)     Forbidden     Only admins can access the data
      
    **/
+
   .get(userControler.getRandomUser);
 
 
 
+router.route("/user/save")
+  .post(userControler.saveUserInfo);
 
 
 

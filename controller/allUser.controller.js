@@ -23,13 +23,19 @@ module.exports.getRandomUser = async (req, res, next) => {
 
     const randomUser = getRndInteger(0, allUserdata.length);
     // console.log(randomUser); // random user data available
-  
+
     res.send(allUserdata[randomUser])
 };
 
 
 
+module.exports.saveUserInfo = async (req, res, next) => {
 
+    console.log("object");
+
+    res.send("saveUserInfo");
+
+};
 
 
 
