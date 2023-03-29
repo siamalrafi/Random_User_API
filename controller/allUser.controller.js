@@ -1,4 +1,5 @@
 const fs = require("fs");
+const userData = require("../data.json");
 
 
 module.exports.getRandomUser = async (req, res, next) => {
@@ -10,19 +11,18 @@ module.exports.getRandomUser = async (req, res, next) => {
         return Math.floor(Math.random() * ((max - 1) - min + 1)) + min;
     };
 
-
     const randomUser = getRndInteger(0, allUserdata.length);
     // console.log(randomUser); // random user data available
 
-    res.send(allUserdata[randomUser])
+    res.status(200).send(allUserdata[randomUser])
 };
 
 
 module.exports.getAllUserInfo = (req, res, next) => {
     const rawdata = fs.readFileSync('data.json');
     const allUserdata = JSON.parse(rawdata);
-    // console.log(student); // all user data available
-    res.send(allUserdata);
+    console.log(allUserdata); // all user data available
+    res.status(200).send(allUserdata);
 };
 
 
@@ -30,23 +30,28 @@ module.exports.getAllUserInfo = (req, res, next) => {
 
 module.exports.saveUserInfo = async (req, res, next) => {
     const userInfo = req.body;
-    // const rawdata = fs.readFileSync('data.json');
-    // const allUserdata = JSON.parse(rawdata);
 
-    // allUserdata.push(userInfo);
+    if (userInfo.id && userInfo.gender && userInfo.name) {
+        userData.push(userInfo);
+        res.status(200).json(userData);
+    } else {
+        res.status(404).send("New data is not valid")
 
-    fs.appendFile('data.json', JSON.stringify(userInfo), (err) => {
-        if (err) {
-            console.log(err.message);
-        } else {
-            console.log('Successfully append');
-        }
-    });
+    }
+
+
+    // fs.appendFile('data.json', JSON.stringify(userInfo), (err) => {
+    //     if (err) {
+    //         console.log(err.message);
+    //     } else {
+    //         console.log('Successfully append');
+    //     }
+    // });
 
 
     // res.sendFile(__dirname + "../data.json");
 
-    res.send("allUserdata");
+    // res.send("allUserdata");
 
 };
 
