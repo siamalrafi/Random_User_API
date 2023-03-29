@@ -5,14 +5,14 @@ const fs = require("fs");
 
 router.route("/")
   /**
-    * @api {get} /tools All tools
-    * @apiDescription Get all the tools
+    * @api {get} /all user info
+    * @apiDescription Get all the user information from this route
     * @apiPermission admin
     *
     * @apiHeader {String} Authorization   User's access token
     *
-    * @apiParam  {Number{1-}}         [page=1]     List page
-    * @apiParam  {Number{1-100}}      [limit=10]  Users per page
+    * @apiParam  {Number{1-}}          
+    * @apiParam  {Number{1-100}}     
     *
     * @apiSuccess {Object[]} all the tools.
     *
@@ -21,19 +21,10 @@ router.route("/")
     */
 
   .get((req, res) => {
-
     const rawdata = fs.readFileSync('data.json');
-
     const student = JSON.parse(rawdata);
     console.log(student);
-
-    //   console.log(student);
-    //   res.sendFile("student")
-
-
     res.send(student)
-
-
   });
 
 

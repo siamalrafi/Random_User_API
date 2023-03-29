@@ -14,19 +14,9 @@ app.use(cors());
 app.use(express.json());
 
 
-// get all user information
-// app.get("/", (req, res) => {
-//   const rawdata = fs.readFileSync('data.json');
-//   const student = JSON.parse(rawdata);
-//   console.log(student);
-//   res.sendFile("student")
-// })
 
 
-
-
-
-app.use("/api/v1", router); 
+app.use("/api/v1", router);
 
 
 
