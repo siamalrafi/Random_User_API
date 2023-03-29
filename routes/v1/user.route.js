@@ -22,9 +22,9 @@ router.route("/user/all")
 
   .get((req, res) => {
     const rawdata = fs.readFileSync('data.json');
-    const student = JSON.parse(rawdata);
+    const allUserdata = JSON.parse(rawdata);
     // console.log(student); // all user data available
-    res.send(student)
+    res.send(allUserdata);
   });
 
 
