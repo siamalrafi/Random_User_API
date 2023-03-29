@@ -1,6 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
+const userControler = require("../../controller/allUser.controller");
+
 
 
 router.route("/user/all")
@@ -20,12 +22,15 @@ router.route("/user/all")
     * @apiError (Forbidden 403)     Forbidden     Only admins can access the data
     */
 
-  .get((req, res) => {
-    const rawdata = fs.readFileSync('data.json');
-    const allUserdata = JSON.parse(rawdata);
-    // console.log(student); // all user data available
-    res.send(allUserdata);
-  });
+  // .get((req, res) => {
+  //   const rawdata = fs.readFileSync('data.json');
+  //   const allUserdata = JSON.parse(rawdata);
+  //   // console.log(student); // all user data available
+  //   res.send(allUserdata);
+  // });
+
+
+  .get(userControler.getAllUserInfo);
 
 
 
