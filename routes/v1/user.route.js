@@ -27,6 +27,22 @@ router.route("/user/all")
 
 
 router.route("/user/random")
+  /**
+     * @api {get} / getRandom user info
+     * @apiDescription Random user information from my all users list.
+     * @apiPermission admin
+     *
+     * @apiHeader {String} Authorization   User's access token
+     *
+     * @apiParam  {Number{1-}}          
+     * @apiParam  {Number{1-100}}     
+     *
+     * @apiSuccess {Object[]} get random user json file.
+     *
+     * @apiError (Unauthorized 401)  Unauthorized  Only authenticated users can access the data
+     * @apiError (Forbidden 403)     Forbidden     Only admins can access the data
+     
+   **/
   .get(userControler.getRandomUser);
 
 
