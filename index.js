@@ -12,7 +12,7 @@ const router = require('./routes/v1/user.route');
 
 app.use(cors());
 app.use(express.json());
-
+app.use(express.static('public'));
 
 
 
@@ -28,6 +28,8 @@ app.all("*", (req, res) => {
 });
 
 app.use(errorHandler);
+
+
 
 
 app.listen(port, () => {

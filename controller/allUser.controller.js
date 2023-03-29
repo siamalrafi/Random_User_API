@@ -30,14 +30,23 @@ module.exports.getAllUserInfo = (req, res, next) => {
 
 module.exports.saveUserInfo = async (req, res, next) => {
     const userInfo = req.body;
+    // const rawdata = fs.readFileSync('data.json');
+    // const allUserdata = JSON.parse(rawdata);
+
+    // allUserdata.push(userInfo);
+
+    fs.appendFile('data.json', JSON.stringify(userInfo), (err) => {
+        if (err) {
+            console.log(err.message);
+        } else {
+            console.log('Successfully append');
+        }
+    });
 
 
-    res.sendFile(__dirname+"")
+    // res.sendFile(__dirname + "../data.json");
 
-
-
-
-    res.send("saveUserInfo");
+    res.send("allUserdata");
 
 };
 
