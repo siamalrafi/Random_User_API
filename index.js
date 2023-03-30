@@ -15,7 +15,7 @@ app.use(express.static('public'));
 
 
 // router
-app.use("/api/v1", router);
+app.use("/.netlify/functions/api/api/v1", router);
 
 
 app.all("*", (req, res) => {
