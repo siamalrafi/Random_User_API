@@ -60,7 +60,8 @@ router.route("/user/update/:id")
   .patch(userControler.updateUserInfo);
 
 
-
+router.route("/user/delete/:id")
+  .delete(userControler.deleteUserInfo);
 
 
 module.exports = router;

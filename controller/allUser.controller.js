@@ -1,7 +1,7 @@
 const fs = require("fs");
 const userData = require("../data.json");
 
-
+// get random User --------------
 module.exports.getRandomUser = async (req, res, next) => {
     const rawdata = fs.readFileSync('data.json');
     const allUserdata = JSON.parse(rawdata);
@@ -18,6 +18,7 @@ module.exports.getRandomUser = async (req, res, next) => {
 };
 
 
+// get all user information --------------
 module.exports.getAllUserInfo = (req, res, next) => {
     const rawdata = fs.readFileSync('data.json');
     const allUserdata = JSON.parse(rawdata);
@@ -27,7 +28,7 @@ module.exports.getAllUserInfo = (req, res, next) => {
 
 
 
-
+// save user info --------------
 module.exports.saveUserInfo = async (req, res, next) => {
     const userInfo = req.body;
 
@@ -55,22 +56,38 @@ module.exports.saveUserInfo = async (req, res, next) => {
 };
 
 
+// update user info --------------
 module.exports.updateUserInfo = (req, res, next) => {
     const id = req.params.id;
 
+    // find the user by their id
     const updateData = userData.find((data) => data.id == id);
 
+    // update user info
     updateData.id = id;
     updateData.name = req.body.name;
     updateData.gendar = req.body.gendar;
     updateData.contact = req.body.contact;
     updateData.adress = req.body.adress;
 
-
     res.status(200).send(updateData);
+};
 
+
+
+
+// delete user -----------------
+module.exports.deleteUserInfo = (req, res, next) => {
 
 };
+
+
+
+
+
+
+
+
 
 
 
