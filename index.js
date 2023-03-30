@@ -18,6 +18,12 @@ app.use(express.static('public'));
 app.use("/api/v1", router);
 
 
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+});
+
+
 app.all("*", (req, res) => {
   res.send("Router dose not exist.")
 });
@@ -26,9 +32,7 @@ app.use(errorHandler);
 
 
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
