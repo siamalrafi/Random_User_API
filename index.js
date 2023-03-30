@@ -15,11 +15,8 @@ app.use(express.json());
 app.use(express.static('public'));
 
 
-
+// router
 app.use("/api/v1", router);
-
-
-
 
 
 
