@@ -59,6 +59,10 @@ router.route("/user/save")
 router.route("/user/update/:id")
   .patch(userControler.updateUserInfo);
 
+router.route("/user/bulk-update")
+  .patch(userControler.updateBulkUpdateInfo);
+
+
 
 router.route("/user/delete/:id")
   .delete(userControler.deleteUserInfo);

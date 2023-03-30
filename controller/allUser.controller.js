@@ -10,10 +10,8 @@ module.exports.getRandomUser = async (req, res, next) => {
     const getRndInteger = (min, max) => {
         return Math.floor(Math.random() * ((max - 1) - min + 1)) + min;
     };
-
     const randomUser = getRndInteger(0, allUserdata.length);
 
-    // console.log(randomUser); // random user data available
     res.status(200).send(allUserdata[randomUser])
 };
 
@@ -75,19 +73,22 @@ module.exports.updateUserInfo = (req, res, next) => {
 
 
 
+// update multiple data 
+module.exports.updateBulkUpdateInfo = (req, res, next) => {
 
-// delete user -----------------
-module.exports.deleteUserInfo = (req, res, next) => {
-
+    res.send("data updating");
 };
 
 
 
 
+// delete user -----------------
+module.exports.deleteUserInfo = (req, res, next) => {
+    const id = req.params.id;
+    const filter = { id: id };
 
-
-
-
-
+    const newData = userData.filter((data) => data.id != id);
+    res.status(200).send(newData);
+};
 
 
