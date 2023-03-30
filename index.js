@@ -7,7 +7,6 @@ const router = require('./routes/v1/user.route');
 
 
 
-
 //  middleware check
 
 app.use(cors());
@@ -17,7 +16,6 @@ app.use(express.static('public'));
 
 // router
 app.use("/api/v1", router);
-
 
 
 app.all("*", (req, res) => {
